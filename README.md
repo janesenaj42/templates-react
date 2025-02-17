@@ -2,6 +2,7 @@
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules. Git hooks are set up using `husky`, and `lint-staged` is used to run linters on staged files before commits.
 
+Template tested with Node v22.13.0 and npm 10.9.2.
 
 ## Quick Start
 
