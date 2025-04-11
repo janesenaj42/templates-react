@@ -8,6 +8,7 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint src tests --fix",
+    "lint:html": "npm run lint -- -f html -o ./eslint/eslint-report.html",
     "preview": "vite preview",
     "test:e2e": "npx playwright test --ui",
     "test:e2e:ci": "npx playwright test"

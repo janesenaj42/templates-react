@@ -1,0 +1,26 @@
+default:
+    tags:
+        - sample
+    image: my.repo/cimg/node:23.11.0
+
+variables:
+    PROJECT_NAME: sample
+    MODULE_NAME: my-package
+    SRC_DIRECTORY: src
+    REPORTS_DIRECTORY: reports
+    PUBLISH_DOCKER_REGISTRY: my.repo
+
+stages:
+    - check
+
+lint:
+    stage: check
+    dependencies: []
+    script:
+        - npm i eslint
+        - npm run lint
+        - npm run lint:html
+    artifacts:
+        expire_in: 2 weeks
+        paths:
+            - ./eslint/eslint-report.html
