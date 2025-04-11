@@ -9,6 +9,7 @@ variables:
     SRC_DIRECTORY: src
     REPORTS_DIRECTORY: reports
     PUBLISH_DOCKER_REGISTRY: my.repo
+    ARTIFACTS_EXPIRY: 2 weeks
 
 stages:
     - check
@@ -21,6 +22,6 @@ lint:
         - npm run lint
         - npm run lint:html
     artifacts:
-        expire_in: 2 weeks
+        expire_in: $ARTIFACTS_EXPIRY
         paths:
             - ./eslint/eslint-report.html
