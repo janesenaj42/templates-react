@@ -26,6 +26,12 @@ To run lint,
 npm run lint
 ```
 
+To run prettier formatter,
+
+```
+npm run format
+```
+
 To run e2e tests with Playwright,
 
 ```
